@@ -91,12 +91,43 @@
             color: var(--mint-dark);
         }
         
+        /* Mobile Menu Styles */
         .mobile-menu-btn {
             display: none;
             background: none;
             border: none;
             font-size: 24px;
             cursor: pointer;
+        }
+        
+        /* Mobile Nav Functionality */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+        }
+        
+        .mobile-nav.active {
+            display: block;
+        }
+        
+        .mobile-nav a {
+            display: block;
+            padding: 15px 10px;
+            text-decoration: none;
+            color: var(--black);
+            font-size: 16px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .mobile-nav a:last-child {
+            border-bottom: none;
         }
         
         /* Hero Section */
@@ -251,6 +282,16 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        /* For better centering on larger screens */
+        @media (min-width: 1200px) {
+            .app-grid {
+                grid-template-columns: repeat(2, minmax(300px, 450px));
+                justify-content: center;
+            }
         }
         
         .app-card {
@@ -689,9 +730,18 @@
                 <a href="#sustainability">Sustainability</a>
                 <a href="#contact">Contact</a>
             </div>
-            <button class="mobile-menu-btn">☰</button>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
         </div>
     </nav>
+    
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#features">Features</a>
+        <a href="#applications">Applications</a>
+        <a href="#specs">Tech Specs</a>
+        <a href="#sustainability">Sustainability</a>
+        <a href="#contact">Contact</a>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
