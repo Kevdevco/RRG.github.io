@@ -997,4 +997,88 @@
                     <img src="image-removebg-preview.png" alt="Contact QR Code" class="qr-code">
                 </div>
                 <div class="contact-form">
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>Rapid Response Glove</h3>
+                    <ul class="footer-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#applications">Applications</a></li>
+                        <li><a href="#specs">Tech Specs</a></li>
+                        <li><a href="#sustainability">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#"><i>fb</i></a>
+                        <a href="#"><i>tw</i></a>
+                        <a href="#"><i>ig</i></a>
+                        <a href="#"><i>li</i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 Rapid Response Glove. All rights reserved.</p>
+                <img src="glove.png" alt="RRG Logo" class="footer-logo">
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileNav = document.getElementById('mobileNav');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileNav.classList.toggle('active');
+            });
+            
+            // Close mobile menu when clicking a link
+            const mobileLinks = mobileNav.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileNav.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
                     <form>
+    <div class="form-group">
+        <label for="name" class="form-label">Your Name</label>
+        <input type="text" id="name" class="form-input" required>
+    </div>
+    <div class="form-group">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" id="email" class="form-input" required>
+    </div>
+    <div class="form-group">
+        <label for="message" class="form-label">Message</label>
+        <textarea id="message" class="form-textarea" required></textarea>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="form-submit">Send Message</button>
+    </div>
+    <div class="form-group">
+        <a href="https://github.com/kevdevco/RRG.github.io/raw/main/RRG_Brochure.pdf" class="hero-cta" style="display: inline-block; margin-top: 20px;">Download Brochure</a>
+    </div>
+</form>
