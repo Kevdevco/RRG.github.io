@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,33 +15,37 @@
             --light-gray: #f5f5f7;
             --dark-gray: #333;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
-        
+
         body {
             background-color: var(--white);
             color: var(--black);
             line-height: 1.6;
             overflow-x: hidden;
         }
-        
-        h1, h2, h3, h4, h5, h6 {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-weight: 600;
         }
-        
+
         .container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
-        /* Navigation */
+
         nav {
             background-color: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(20px);
@@ -52,33 +57,33 @@
             padding: 20px 0;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        
+
         .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .logo {
             display: flex;
             align-items: center;
             gap: 10px;
         }
-        
+
         .logo img {
             height: 40px;
         }
-        
+
         .logo h1 {
             font-size: 20px;
             font-weight: 500;
         }
-        
+
         .nav-links {
             display: flex;
             gap: 30px;
         }
-        
+
         .nav-links a {
             text-decoration: none;
             color: var(--black);
@@ -86,12 +91,11 @@
             font-weight: 400;
             transition: color 0.3s ease;
         }
-        
+
         .nav-links a:hover {
             color: var(--mint-dark);
         }
-        
-        /* Mobile Menu Styles */
+
         .mobile-menu-btn {
             display: none;
             background: none;
@@ -99,8 +103,7 @@
             font-size: 24px;
             cursor: pointer;
         }
-        
-        /* Mobile Nav Functionality */
+
         .mobile-nav {
             display: none;
             position: fixed;
@@ -112,11 +115,11 @@
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
             z-index: 999;
         }
-        
+
         .mobile-nav.active {
             display: block;
         }
-        
+
         .mobile-nav a {
             display: block;
             padding: 15px 10px;
@@ -125,12 +128,11 @@
             font-size: 16px;
             border-bottom: 1px solid #eee;
         }
-        
+
         .mobile-nav a:last-child {
             border-bottom: none;
         }
-        
-        /* Hero Section */
+
         .hero {
             min-height: 100vh;
             display: flex;
@@ -139,8 +141,7 @@
             position: relative;
             overflow: hidden;
         }
-        
-        /* Video Background Styles */
+
         .video-background {
             position: absolute;
             top: 0;
@@ -150,7 +151,7 @@
             overflow: hidden;
             z-index: 0;
         }
-        
+
         .video-background video {
             position: absolute;
             top: 50%;
@@ -162,17 +163,17 @@
             transform: translateX(-50%) translateY(-50%);
             object-fit: cover;
         }
-        
+
         .video-overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(213, 229, 227, 0.0); /* Mint light color with opacity */
+            background-color: rgba(213, 229, 227, 0.0);
             z-index: 1;
         }
-        
+
         .hero-content {
             position: relative;
             display: flex;
@@ -181,24 +182,24 @@
             z-index: 2;
             max-width: 600px;
         }
-        
+
         .hero-text {
             max-width: 600px;
             color: #f5f5f7;
         }
-        
+
         .hero-text h2 {
             font-size: 48px;
             line-height: 1.1;
             margin-bottom: 24px;
         }
-        
+
         .hero-text p {
             font-size: 21px;
             color: #f5f5f7;
             margin-bottom: 32px;
         }
-        
+
         .hero-cta {
             display: inline-block;
             background-color: var(--black);
@@ -209,75 +210,73 @@
             font-size: 17px;
             transition: all 0.3s ease;
         }
-        
+
         .hero-cta:hover {
             background-color: var(--mint-dark);
             transform: scale(1.05);
         }
-        
-        /* Features Section */
+
         .features {
             background-color: var(--white);
             padding: 120px 0;
         }
-        
+
         .section-title {
             text-align: center;
             margin-bottom: 80px;
         }
-        
+
         .section-title h2 {
             font-size: 40px;
             margin-bottom: 16px;
         }
-        
+
         .section-title p {
             font-size: 20px;
             color: var(--dark-gray);
             max-width: 700px;
             margin: 0 auto;
         }
-        
+
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
         }
-        
+
         .feature-card {
             background-color: var(--light-gray);
             border-radius: 20px;
             padding: 40px 30px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         .feature-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
-        
+
         .feature-icon {
             font-size: 40px;
             margin-bottom: 24px;
             color: var(--mint-dark);
         }
-        
+
         .feature-card h3 {
             font-size: 24px;
             margin-bottom: 16px;
         }
-        
+
         .feature-card p {
             font-size: 16px;
             color: var(--dark-gray);
         }
-        
-        /* Applications Section */
+
         .applications {
             background-color: var(--mint-light);
             padding: 120px 0;
         }
-        
+
         .app-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -285,15 +284,14 @@
             max-width: 1000px;
             margin: 0 auto;
         }
-        
-        /* For better centering on larger screens */
+
         @media (min-width: 1200px) {
             .app-grid {
                 grid-template-columns: repeat(2, minmax(300px, 450px));
                 justify-content: center;
             }
         }
-        
+
         .app-card {
             background-color: var(--white);
             border-radius: 20px;
@@ -301,89 +299,87 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
-        
+
         .app-card:hover {
             transform: translateY(-10px);
         }
-        
+
         .app-img {
             width: 100%;
             height: 200px;
             object-fit: cover;
         }
-        
+
         .app-content {
             padding: 30px;
         }
-        
+
         .app-content h3 {
             font-size: 24px;
             margin-bottom: 16px;
         }
-        
+
         .app-content p {
             font-size: 16px;
             color: var(--dark-gray);
             margin-bottom: 20px;
         }
-        
-        /* Tech Specs Section */
+
         .specs {
             padding: 120px 0;
             background-color: var(--white);
         }
-        
+
         .specs-container {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        
+
         .specs-img {
             max-width: 500px;
             margin-bottom: 60px;
         }
-        
+
         .specs-img img {
             width: 100%;
             height: auto;
             display: block;
         }
-        
+
         .specs-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
             width: 100%;
         }
-        
+
         .spec-item {
             display: flex;
             align-items: flex-start;
             gap: 16px;
         }
-        
+
         .spec-icon {
             font-size: 24px;
             color: var(--mint-dark);
         }
-        
+
         .spec-content h4 {
             font-size: 18px;
             margin-bottom: 8px;
         }
-        
+
         .spec-content p {
             font-size: 14px;
             color: var(--dark-gray);
         }
-        
-        /* Sustainability Section */
+
         .sustainability {
             background-color: var(--mint-light);
             padding: 120px 0;
         }
-        
+
         .sustainability-content {
             display: flex;
             flex-direction: column;
@@ -392,13 +388,13 @@
             max-width: 800px;
             margin: 0 auto;
         }
-        
+
         .sustainability-icon {
             font-size: 60px;
             color: var(--mint-dark);
             margin-bottom: 30px;
         }
-        
+
         .sustainability-list {
             display: flex;
             flex-wrap: wrap;
@@ -406,7 +402,7 @@
             gap: 20px;
             margin-top: 40px;
         }
-        
+
         .sustainability-item {
             background-color: var(--white);
             padding: 16px 30px;
@@ -414,38 +410,37 @@
             font-size: 16px;
             color: var(--dark-gray);
         }
-        
-        /* Testimonials Section */
+
         .testimonials {
             padding: 120px 0;
             background-color: var(--white);
         }
-        
+
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
         }
-        
+
         .testimonial-card {
             background-color: var(--light-gray);
             border-radius: 20px;
             padding: 40px 30px;
             position: relative;
         }
-        
+
         .testimonial-quote {
             font-size: 18px;
             margin-bottom: 24px;
             color: var(--dark-gray);
         }
-        
+
         .testimonial-author {
             display: flex;
             align-items: center;
             gap: 16px;
         }
-        
+
         .testimonial-avatar {
             width: 50px;
             height: 50px;
@@ -457,81 +452,82 @@
             color: var(--white);
             font-weight: 600;
         }
-        
+
         .testimonial-info h4 {
             font-size: 16px;
             margin-bottom: 4px;
         }
-        
+
         .testimonial-info p {
             font-size: 14px;
             color: var(--dark-gray);
         }
-        
-        /* Contact Section */
+
         .contact {
             padding: 120px 0;
             background-color: var(--mint-light);
         }
-        
+
         .contact-content {
             display: flex;
             gap: 60px;
             align-items: center;
         }
-        
+
         .contact-info {
             flex: 1;
         }
-        
+
         .contact-form {
             flex: 1;
         }
-        
+
         .contact-item {
             display: flex;
             align-items: flex-start;
             gap: 16px;
             margin-bottom: 24px;
         }
-        
+
         .contact-icon {
             font-size: 24px;
             color: var(--mint-dark);
         }
-        
+
         .contact-text h4 {
             font-size: 18px;
             margin-bottom: 8px;
         }
-        
-        .contact-text p, .contact-text a {
+
+        .contact-text p,
+        .contact-text a {
             font-size: 16px;
             color: var(--dark-gray);
             text-decoration: none;
         }
-        
+
         .contact-text a:hover {
             color: var(--mint-dark);
         }
-        
+
         .qr-code {
             margin-top: 40px;
             width: 150px;
             height: auto;
         }
-        
+
         .form-group {
             margin-bottom: 24px;
         }
-        
+
         .form-label {
             display: block;
             font-size: 16px;
             margin-bottom: 8px;
         }
-        
-        .form-input, .form-textarea {
+
+        .form-input,
+        .form-textarea {
             width: 100%;
             padding: 16px;
             border: 1px solid #ddd;
@@ -539,17 +535,18 @@
             font-size: 16px;
             transition: border-color 0.3s ease;
         }
-        
-        .form-input:focus, .form-textarea:focus {
+
+        .form-input:focus,
+        .form-textarea:focus {
             border-color: var(--mint-dark);
             outline: none;
         }
-        
+
         .form-textarea {
             min-height: 150px;
             resize: vertical;
         }
-        
+
         .form-submit {
             background-color: var(--black);
             color: var(--white);
@@ -560,60 +557,60 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
-        
+
         .form-submit:hover {
             background-color: var(--mint-dark);
             transform: scale(1.05);
         }
-        
-        /* Footer */
+
         footer {
             background-color: var(--black);
             color: var(--white);
             padding: 60px 0 30px;
         }
-        
+
         .footer-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 40px;
             margin-bottom: 60px;
         }
-        
+
         .footer-col h3 {
             font-size: 18px;
             margin-bottom: 24px;
             color: var(--white);
         }
-        
+
         .footer-links {
             list-style: none;
         }
-        
+
         .footer-links li {
             margin-bottom: 12px;
         }
-        
+
         .footer-links a {
             color: #ddd;
             text-decoration: none;
             font-size: 14px;
             transition: color 0.3s ease;
         }
-        
+
         .footer-links a:hover {
             color: var(--mint);
         }
-        
-        .social-links {
+
+        .footer-social {
             display: flex;
             gap: 16px;
+
         }
-        
-        .social-links a {
+
+        .social-link {
             width: 40px;
             height: 40px;
-            background-color: #333;
+            background-color: var(--dark-gray);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -622,12 +619,18 @@
             text-decoration: none;
             transition: all 0.3s ease;
         }
-        
-        .social-links a:hover {
-            background-color: var(--mint);
+
+        .social-link:hover {
+            background-color: var(--mint-dark);
             transform: scale(1.1);
         }
-        
+
+        .social-link svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
         .footer-bottom {
             display: flex;
             justify-content: space-between;
@@ -635,88 +638,90 @@
             padding-top: 30px;
             border-top: 1px solid #333;
         }
-        
+
         .copyright {
             font-size: 14px;
             color: #ddd;
         }
-        
+
         .footer-logo {
             width: 80px;
         }
-        
-        /* Responsive Styles */
+
         @media (max-width: 1024px) {
             .hero-text h2 {
                 font-size: 42px;
             }
-            
+
             .hero-text p {
                 font-size: 18px;
             }
-            
+
             .section-title h2 {
                 font-size: 36px;
             }
-            
+
             .contact-content {
                 flex-direction: column;
             }
         }
-        
+
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
-            
+
             .mobile-menu-btn {
                 display: block;
             }
-            
+
             .hero {
                 padding: 100px 0 60px;
             }
-            
+
             .hero-text h2 {
                 font-size: 36px;
             }
-            
+
             .hero-text p {
                 font-size: 16px;
             }
-            
+
             .section-title h2 {
                 font-size: 32px;
             }
-            
+
             .footer-container {
                 grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             }
-            
+
             .footer-bottom {
                 flex-direction: column;
                 gap: 20px;
                 text-align: center;
             }
         }
-        
+
         @media (max-width: 480px) {
             .hero-text h2 {
                 font-size: 30px;
             }
-            
+
             .section-title h2 {
                 font-size: 28px;
             }
-            
-            .feature-card, .app-card, .testimonial-card {
+
+            .feature-card,
+            .app-card,
+            .testimonial-card {
                 padding: 30px 20px;
             }
         }
     </style>
 </head>
+
 <body>
-    <!-- Navigation -->
+
     <nav>
         <div class="container nav-container">
             <div class="logo">
@@ -733,8 +738,8 @@
             <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
         </div>
     </nav>
-    
-    <!-- Mobile Navigation Menu -->
+
+
     <div class="mobile-nav" id="mobileNav">
         <a href="#features">Features</a>
         <a href="#applications">Applications</a>
@@ -743,12 +748,12 @@
         <a href="#contact">Contact</a>
     </div>
 
-    <!-- Hero Section -->
+
     <section class="hero">
         <div class="video-background">
             <video autoplay muted loop playsinline>
                 <source src="0413 (1).mp4" type="video/mp4">
-                <!-- You can add additional source formats if needed -->
+
             </video>
             <div class="video-overlay"></div>
         </div>
@@ -756,19 +761,21 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h2>RAPID RESPONSE GLOVE</h2>
-                    <p>Safety at your fingertips. A revolutionary wearable technology designed for emergency responders, healthcare professionals, workplace safety officers, and households.</p>
+                    <p>Safety at your fingertips. A revolutionary wearable technology designed for emergency responders,
+                        healthcare professionals, workplace safety officers, and households.</p>
                     <a href="#contact" class="hero-cta">Enhance Your Emergency Response</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
+
     <section class="features" id="features">
         <div class="container">
             <div class="section-title">
                 <h2>FEATURE HIGHLIGHTS</h2>
-                <p>Innovative features that enhance decision-making in critical situations while maintaining full battery life and functionality.</p>
+                <p>Innovative features that enhance decision-making in critical situations while maintaining full
+                    battery life and functionality.</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
@@ -805,7 +812,7 @@
         </div>
     </section>
 
-    <!-- Applications Section -->
+
     <section class="applications" id="applications">
         <div class="container">
             <div class="section-title">
@@ -817,35 +824,42 @@
                     <img src="mikita-yo-C53CnEp-hsU-unsplash.jpg" alt="Emergency Response" class="app-img">
                     <div class="app-content">
                         <h3>Emergency Response</h3>
-                        <p>Enhance first responder capabilities with hands-free vital monitoring. Faster triage decisions and monitoring of both patients and responder health status during high-stress situations.</p>
+                        <p>Enhance first responder capabilities with hands-free vital monitoring. Faster triage
+                            decisions and monitoring of both patients and responder health status during high-stress
+                            situations.</p>
                     </div>
                 </div>
                 <div class="app-card">
                     <img src="olga-kononenko-98__MsKaUsI-unsplash.jpg" alt="Healthcare Setting" class="app-img">
                     <div class="app-content">
                         <h3>Healthcare Setting</h3>
-                        <p>Streamline patient assessment with instant vital sign readings. Secure data transmission integrates with electronic health records for seamless documentation and improved patient care.</p>
+                        <p>Streamline patient assessment with instant vital sign readings. Secure data transmission
+                            integrates with electronic health records for seamless documentation and improved patient
+                            care.</p>
                     </div>
                 </div>
                 <div class="app-card">
                     <img src="clem-onojeghuo-zZza888FSKg-unsplash.jpg" alt="Industry Safety" class="app-img">
                     <div class="app-content">
                         <h3>Industry Safety</h3>
-                        <p>Monitor worker health in hazardous environments. Detect early signs of heat stress, overexertion, or exposure to harmful elements before they become dangerous.</p>
+                        <p>Monitor worker health in hazardous environments. Detect early signs of heat stress,
+                            overexertion, or exposure to harmful elements before they become dangerous.</p>
                     </div>
                 </div>
                 <div class="app-card">
                     <img src="minh-pham-OtXADkUh3-I-unsplash.jpg" alt="Home Safety" class="app-img">
                     <div class="app-content">
                         <h3>Home Safety</h3>
-                        <p>Add lifesaving capability to any home emergency kit. Provides crucial health information before professional help arrives, potentially making the difference in critical situations.</p>
+                        <p>Add lifesaving capability to any home emergency kit. Provides crucial health information
+                            before professional help arrives, potentially making the difference in critical situations.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Technical Specifications Section -->
+
     <section class="specs" id="specs">
         <div class="container">
             <div class="section-title">
@@ -911,16 +925,18 @@
         </div>
     </section>
 
-    <!-- Sustainability Section -->
+
     <section class="sustainability" id="sustainability">
         <div class="container">
             <div class="section-title">
                 <h2>SUSTAINABILITY COMMITMENT</h2>
-                <p>At Rapid Response Technologies, we believe in creating products that protect both people and the planet.</p>
+                <p>At Rapid Response Technologies, we believe in creating products that protect both people and the
+                    planet.</p>
             </div>
             <div class="sustainability-content">
                 <div class="sustainability-icon">🌱</div>
-                <p>Our gloves are manufactured using sustainable practices that minimize environmental impact while maintaining the highest standards of quality and performance.</p>
+                <p>Our gloves are manufactured using sustainable practices that minimize environmental impact while
+                    maintaining the highest standards of quality and performance.</p>
                 <div class="sustainability-list">
                     <div class="sustainability-item">Made with 65% recycled materials</div>
                     <div class="sustainability-item">Eco-friendly manufacturing</div>
@@ -932,7 +948,7 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+
     <section class="testimonials">
         <div class="container">
             <div class="section-title">
@@ -941,7 +957,9 @@
             </div>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <p class="testimonial-quote">"The monitoring capabilities have been invaluable during emergency responses. The instant vitals readings have helped us make faster decisions in critical situations. The Rapid Response Glove has become an essential tool in our toolkit."</p>
+                    <p class="testimonial-quote">"The monitoring capabilities have been invaluable during emergency
+                        responses. The instant vitals readings have helped us make faster decisions in critical
+                        situations. The Rapid Response Glove has become an essential tool in our toolkit."</p>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">ER</div>
                         <div class="testimonial-info">
@@ -951,7 +969,9 @@
                     </div>
                 </div>
                 <div class="testimonial-card">
-                    <p class="testimonial-quote">"As a safety manager, I can't emphasize enough how important the Rapid Response Glove has been for monitoring worker health in high-risk areas. The real-time data has helped prevent several potential incidents."</p>
+                    <p class="testimonial-quote">"As a safety manager, I can't emphasize enough how important the Rapid
+                        Response Glove has been for monitoring worker health in high-risk areas. The real-time data has
+                        helped prevent several potential incidents."</p>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">SM</div>
                         <div class="testimonial-info">
@@ -964,7 +984,7 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-title">
@@ -977,7 +997,7 @@
                         <div class="contact-icon">🌐</div>
                         <div class="contact-text">
                             <h4>Website</h4>
-                            <p><a href="https://kevdevco.github.io/RRG.github.io/" target="_blank">https://kevdevco.github.io/RRG.github.io/</a></p>
+                            <p><a href="https://kevdevco.github.io/RRG.github.io/" target="_blank">https:
                         </div>
                     </div>
                     <div class="contact-item">
@@ -998,31 +1018,32 @@
                 </div>
                 <div class="contact-form">
                     <form>
-    <div class="form-group">
-        <label for="name" class="form-label">Your Name</label>
-        <input type="text" id="name" class="form-input" required>
-    </div>
-    <div class="form-group">
-        <label for="email" class="form-label">Email Address</label>
-        <input type="email" id="email" class="form-input" required>
-    </div>
-    <div class="form-group">
-        <label for="message" class="form-label">Message</label>
-        <textarea id="message" class="form-textarea" required></textarea>
-    </div>
-    <div class="form-group">
-        <button type="submit" class="form-submit">Send Message</button>
-    </div>
-    <div class="form-group">
-        <a href="https://github.com/kevdevco/RRG.github.io/raw/main/RRG_Brochure.pdf" class="hero-cta" style="display: inline-block; margin-top: 20px;">Download Brochure</a>
-    </div>
-</form>
-                    </div>
+                        <div class="form-group">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" id="name" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" class="form-textarea" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="form-submit">Send Message</button>
+                        </div>
+                        <div class="form-group">
+                            <a href="https://github.com/kevdevco/RRG.github.io/raw/main/RRG_Brochure.pdf"
+                                class="hero-cta" style="display: inline-block; margin-top: 20px;">Download Brochure</a>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+
     <footer>
         <div class="container">
             <div class="footer-container">
@@ -1046,12 +1067,33 @@
                 </div>
                 <div class="footer-col">
                     <h3>Connect</h3>
-                    <div class="social-links">
-                        <a href="#"><i>fb</i></a>
-                        <a href="#"><i>tw</i></a>
-                        <a href="#"><i>ig</i></a>
-                        <a href="#"><i>li</i></a>
+                    <div class="footer-social">
+                        <a href="https://facebook.com/yourpage" class="social-link" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M22,12A10,10 0 1,0 12,22V14H9v-3h3V8.5A4.5,4.5 0 0,1 16.5,4h3v3h-3A1.5,1.5 0 0,0 15,8.5V11h4l-1,3h-3v8A10,10 0 0,0 22,12Z" />
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/yourhandle" class="social-link" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 0 0 1.88-2.37 8.56 8.56 0 0 1-2.72 1.04 4.28 4.28 0 0 0-7.3 3.9A12.13 12.13 0 0 1 3.1 4.6a4.28 4.28 0 0 0 1.32 5.7 4.25 4.25 0 0 1-1.94-.54v.05a4.28 4.28 0 0 0 3.44 4.2 4.3 4.3 0 0 1-1.93.07 4.28 4.28 0 0 0 4 3 8.6 8.6 0 0 1-5.32 1.84A8.8 8.8 0 0 1 2 18.13a12.13 12.13 0 0 0 6.56 1.92c7.88 0 12.2-6.53 12.2-12.2l-.01-.56A8.7 8.7 0 0 0 24 4.56a8.4 8.4 0 0 1-2.54.7z" />
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com/yourprofile" class="social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7Zm10 2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h10Zm-5 3.5A4.5 4.5 0 1 0 16.5 12 4.5 4.5 0 0 0 12 7.5Zm0 2A2.5 2.5 0 1 1 14.5 12 2.5 2.5 0 0 1 12 9.5Zm4.75-.75a.75.75 0 1 1 .75-.75.75.75 0 0 1-.75.75Z" />
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/in/yourprofile" class="social-link" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M19 3A2 2 0 0 1 21 5v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-11.5 16V9H5.5v10h2m-1-11.5a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5m13.5 11.5v-5.5c0-1.5-1-2-2-2s-2 .5-2 2V19h2v-5.5c0-.5 .5-1 1-1s1 .5 1 1V19h2Z" />
+                            </svg>
+                        </a>
                     </div>
+
                 </div>
             </div>
             <div class="footer-bottom">
@@ -1061,24 +1103,24 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Mobile Menu Toggle -->
+
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
             const mobileNav = document.getElementById('mobileNav');
-            
-            mobileMenuBtn.addEventListener('click', function() {
+
+            mobileMenuBtn.addEventListener('click', function () {
                 mobileNav.classList.toggle('active');
             });
-            
-            // Close mobile menu when clicking a link
+
             const mobileLinks = mobileNav.querySelectorAll('a');
             mobileLinks.forEach(link => {
-                link.addEventListener('click', function() {
+                link.addEventListener('click', function () {
                     mobileNav.classList.remove('active');
                 });
             });
         });
     </script>
 </body>
+
 </html>
